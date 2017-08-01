@@ -1,0 +1,14 @@
+body {
+    background-image: url("../resource/drawable-xhdpi/main_image_bg.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: right bottom;    
+}
+
+.ic_logo {
+    position: relative;
+    top: 60.7px;
+    left: 60.7px;
+    width: 233.3px;
+    height: 50px;
+}
