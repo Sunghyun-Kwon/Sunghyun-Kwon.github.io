@@ -72,7 +72,7 @@ function initializeCastApi() {
   // optional: you may change it to your own app ID/receiver
       //chrome.cast.media.DEFAULT_MEDIA_RECEIVER_APP_ID
   var applicationIDs = [
-      6850B612
+      '6850B612'
     ];
 
 
