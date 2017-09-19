@@ -24,15 +24,15 @@ function printClock() {
     var currentMinute = addZeros(currentDate.getMinutes() ,2);
     var currentSeconds =  addZeros(currentDate.getSeconds(),2);
     
-    if(currentHours >= 12){ // 시간이 12보다 클 때 PM으로 세팅, 12를 빼줌
+    if (currentHours >= 12) { // 시간이 12보다 클 때 PM으로 세팅, 12를 빼줌
     	amPm = 'PM';
     	currentHours = addZeros(currentHours - 12,2);
     }
 
-    if(currentSeconds >= 50){// 50초 이상일 때 색을 변환해 준다.
+    if (currentSeconds >= 50) {// 50초 이상일 때 색을 변환해 준다.
        currentSeconds = '<span style="color:#de1951;">'+currentSeconds+'</span>'
     }
-    clock.innerHTML = currentHours+":"+currentMinute+"<br>"+day[currentDate.getDay()] + ", " + currentDate.getDate() + " " + month[currentDate.getMonth()]; //날짜를 출력해 줌
+    clock.innerHTML = currentHours + ":"+currentMinute + "<br>" + day[currentDate.getDay()] + ", " + currentDate.getDate() + " " + month[currentDate.getMonth()]; //날짜를 출력해 줌
     
     setTimeout("printClock()",1000);         // 1초마다 printClock() 함수 호출
 }

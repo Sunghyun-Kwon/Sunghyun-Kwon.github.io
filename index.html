@@ -1,13 +1,25 @@
 <!doctype html>
 <html lang="en-US">
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>MYSTV</title>
-<link href="css/singlePageTemplate.css" rel="stylesheet" type="text/css">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>MYSTV</title>
+	<link href="css/singlePageTemplate.css" rel="stylesheet" type="text/css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
-<body onload="printClock()">
+
+<body onload="printClock()">  
+  <div class="logo">
+		<a href="javascript:window.location.href=window.location.href">
+			<img src="images/drawable-hdpi/ic_logo.png"></img>
+		</a>
+	</div>
+
+	<div class="wrap">
+		<img src="images/drawable-hdpi/ic_english.png"></img>
+	</div>
+  
   <div class="slideshow-container">
     <div class="mySlides fade">
       <img src="images/drawable-hdpi/main_image_bg.png" style="width:100%">
@@ -19,55 +31,55 @@
 
     <div class="mySlides fade">
       <img src="images/drawable-hdpi/bg_03.png" style="width:100%">
-    </div>
-    <div class="overlay">
-    	<div class="textAndTime"><font color="ffffff" size=40dp>			
-    		<div class="roomAndName">    		
-    			RN 1952<br>
-    			James Kim			    		
-    		</div>
-    		<div id="time">
-    		</div>
-    		<div class="message">
-    			Welcome to Royal Caribbean<br>
-    			International.
-    		</div>
-    	</div>
-		<!-- menu container -->
-		<div class="menu">
-		<!--
-			<div class="youtube">
-				<img src="images/drawable-hdpi/entertainment_5.png">
+    </div>    
+
+		<div class="overlay" >
+			<div class="textAndTime"><font font-family="sans-serif" color="ffffff" size=40dp>			
+				<div class="roomAndName">    		
+					RN 1952<br>
+					James Kim			    		
+				</div>
+				<div id="time">
+				</div>
+				<div class="message">
+					Welcome to Royal Caribbean<br>
+					International.
+				</div>
 			</div>
-			-->
-			<div class="todaysEvents">
-				<a href="image_mystv/tv_event 1.png">
-				<img src="images/drawable-hdpi/main_image_2.png">
-				</a>
-				<!--<div class="text_1">Todays Events</div>-->
-			</div>
-			<div class="request">
-				<a href="image_mystv/request_2.png">
-				<img src="images/drawable-hdpi/main_image_3.png">
-				</a>
-				<!--<div class="text_2">Request</div>-->
-			</div>
-			<div class="entertainment">
-				<a href="image_mystv/tv_ENTERTAINMENT.png">
-				<img src="images/drawable-hdpi/main_image_4.png">
-				</a>
-				<!--<div class="text_3">Entertainment</div>-->
-			</div>
-			<div class="excursions">
-				<a href="image_mystv/tv_EXCURSION.png">
-				<img src="images/drawable-hdpi/main_image_5.png">
-				</a>
-				<!--<div class="text_4">Excursions</div>-->
+			<!-- menu container -->
+			<div class="menu">
+			<!--
+				<div class="youtube">
+					<img src="images/drawable-hdpi/entertainment_5.png">
+				</div>
+				-->
+				<div class="todaysEvents">
+					<a href="image_mystv/tv_event 1.png">
+					<img src="images/drawable-hdpi/main_image_2.png">
+					</a>
+					<!--<div class="text_1">Todays Events</div>-->
+				</div>
+				<div class="request">
+					<a href="image_mystv/request_2.png">
+					<img src="images/drawable-hdpi/main_image_3.png">
+					</a>
+					<!--<div class="text_2">Request</div>-->
+				</div>
+				<div class="entertainment">
+					<a href="image_mystv/tv_ENTERTAINMENT.png">
+					<img src="images/drawable-hdpi/main_image_4.png">
+					</a>
+					<!--<div class="text_3">Entertainment</div>-->
+				</div>
+				<div class="excursions">
+					<a href="image_mystv/tv_EXCURSION.png">
+					<img src="images/drawable-hdpi/main_image_5.png">
+					</a>
+					<!--<div class="text_4">Excursions</div>-->
+				</div>
 			</div>
 		</div>
-		
 	</div>
-  </div>
 
   <script src="javascript/main.js"></script>
 </body>
