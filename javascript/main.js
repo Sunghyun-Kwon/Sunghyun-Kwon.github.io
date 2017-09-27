@@ -1,6 +1,34 @@
 var slideIndex = 0;
 showSlides();
 
+$.lang = {};
+$.lang.en = {
+	0: 'Welcome to Royal Caribbean\<br\>International',
+	1: 'YOUTUBE',
+	2: 'TODAY\'S EVENTS',
+	3: 'REQUEST',
+	4: 'ENTERTAINMENT',
+	5: 'EXCURSIONS'
+};
+
+$.lang.sp = {
+	0: 'Bienvenido a Royal Caribbean\<br\>International',
+	1: 'YOUTUBE',
+	2: 'EVENTO DE HOY',
+	3: 'SOLICITUD',
+	4: 'ENTRETENIMIENTO',
+	5: 'EXCURSIONES'
+}
+
+$.lang.ch = {
+	0: '欢迎来到皇家加勒比国际',
+	1: 'YOUTUBE',
+	2: '今天的事件',
+	3: '请求',
+	4: '娱乐',
+	5: '游览'
+}
+
 function showSlides() {
     var i;
     var slides = document.getElementsByClassName("mySlides");
@@ -47,5 +75,6 @@ function addZeros(num, digit) { // 자릿수 맞춰주기
 	  }
 	  return zero + num;
 }
+
 
 

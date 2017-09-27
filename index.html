@@ -10,7 +10,7 @@
 </head>
 
 <body onload="printClock()">  
-  <div class="logo">
+	<div class="logo">
 		<a href="javascript:window.location.href=window.location.href">
 			<img src="images/drawable-hdpi/ic_logo.png"></img>
 		</a>
@@ -20,67 +20,76 @@
 		<img src="images/drawable-hdpi/ic_english.png"></img>
 	</div>
   
-  <div class="slideshow-container">
-    <div class="mySlides fade">
-      <img src="images/drawable-hdpi/main_image_bg.png" style="width:100%">
-    </div>
+	<div class="slideshow-container">
+		<div class="mySlides fade">
+			<img src="images/drawable-hdpi/main_image_bg.png" style="width:100%">
+		</div>
 
-    <div class="mySlides fade">
-      <img src="images/drawable-hdpi/bg_02.png" style="width:100%">
-    </div>
+		<div class="mySlides fade">
+			<img src="images/drawable-hdpi/bg_02.png" style="width:100%">
+		</div>
 
-    <div class="mySlides fade">
-      <img src="images/drawable-hdpi/bg_03.png" style="width:100%">
-    </div>    
+		<div class="mySlides fade">
+			<img src="images/drawable-hdpi/bg_03.png" style="width:100%">
+		</div>    
 
 		<div class="overlay" >
-			<div class="textAndTime"><font font-family="sans-serif" color="ffffff" size=40dp>			
-				<div class="roomAndName">    		
-					RN 1952<br>
-					James Kim			    		
+			<div class="textAndTime"><font font-family="sans-serif" color="ffffff" size=35px>			
+				<div id="room">    		
+					RN 1952<br />
+					James Kim
 				</div>
-				<div id="time">
-				</div>
-				<div class="message">
+				<div id="time"></div>
+				<div id="message">
 					Welcome to Royal Caribbean<br>
 					International.
 				</div>
 			</div>
 			<!-- menu container -->
 			<div class="menu">
-			<!--
 				<div class="youtube">
 					<img src="images/drawable-hdpi/entertainment_5.png">
+					<div class="youtube_overlay">
+						<div class="youtube_text">YOUTUBE</div>
+					</div>
+					</img>
 				</div>
-				-->
 				<div class="todaysEvents">
 					<a href="image_mystv/tv_event 1.png">
-					<img src="images/drawable-hdpi/main_image_2.png">
+						<img src="images/drawable-hdpi/main_image_2.png">
 					</a>
-					<!--<div class="text_1">Todays Events</div>-->
+					<div class="events_overlay">
+						<div class="events_text">TODAY'S EVENTS</div>
+					</div>
 				</div>
 				<div class="request">
 					<a href="image_mystv/request_2.png">
-					<img src="images/drawable-hdpi/main_image_3.png">
+						<img src="images/drawable-hdpi/main_image_3.png">
 					</a>
-					<!--<div class="text_2">Request</div>-->
+					<div class="request_overlay">
+						<div class="request_text">REQUEST</div>
+					</div>
 				</div>
 				<div class="entertainment">
 					<a href="image_mystv/tv_ENTERTAINMENT.png">
-					<img src="images/drawable-hdpi/main_image_4.png">
+						<img src="images/drawable-hdpi/main_image_4.png">
 					</a>
-					<!--<div class="text_3">Entertainment</div>-->
+					<div class="enter_overlay">
+						<div class="enter_text">ENTERTAINMENT</div>
+					</div>
 				</div>
 				<div class="excursions">
 					<a href="image_mystv/tv_EXCURSION.png">
-					<img src="images/drawable-hdpi/main_image_5.png">
+						<img src="images/drawable-hdpi/main_image_5.png">
 					</a>
-					<!--<div class="text_4">Excursions</div>-->
+					<div class="excursions_overlay">
+						<div class="excursions_text">EXCURSIONS</div>
+					</div>	
 				</div>
 			</div>
 		</div>
 	</div>
 
-  <script src="javascript/main.js"></script>
+	<script src="javascript/main.js"></script>
 </body>
 </html>
