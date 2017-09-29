@@ -29,6 +29,22 @@ $.lang.ch = {
 	5: '游览'
 }
 
+function setLanguage(currentLanguage) {
+	console.log('setLanguage : ' + currentLanguage);
+	
+	$('[data-langNum]').each(function () {
+		var $this = $(this);
+		$this.html($.lang[currentLanguage][$this.data('langnum')]);
+	});
+}
+
+function clickLanguage(imgParam) {
+	console.log(imgParam);
+	var lang = imgParam.lang;
+	console.log(lang);
+	setLanguage(lang);
+}
+
 function showSlides() {
     var i;
     var slides = document.getElementsByClassName("mySlides");

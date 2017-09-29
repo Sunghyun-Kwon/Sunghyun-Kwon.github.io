@@ -9,7 +9,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
-<body onload="printClock()">  
+<body onload="printClock()"> 
 	<div class="logo">
 		<a href="javascript:window.location.href=window.location.href">
 			<img src="images/drawable-hdpi/ic_logo.png"></img>
@@ -17,7 +17,9 @@
 	</div>
 
 	<div class="wrap">
-		<img src="images/drawable-hdpi/ic_english.png"></img>
+		<img id="english" lang="en" src="images/drawable-hdpi/ic_english.png" onclick="clickLanguage(this)"></img>
+		<img id="spanish" lang="sp" src="images/drawable-hdpi/ic_spanish.png" onclick="clickLanguage(this)"></img>
+		<img id="chinese" lang="ch" src="images/drawable-hdpi/ic_chinese.png" onclick="clickLanguage(this)"></img>
 	</div>
   
 	<div class="slideshow-container">
@@ -34,13 +36,13 @@
 		</div>    
 
 		<div class="overlay" >
-			<div class="textAndTime"><font font-family="sans-serif" color="ffffff" size=35px>			
+			<div class="textAndTime"><font font-family="sans-serif" color="ffffff" size=60%>			
 				<div id="room">    		
 					RN 1952<br />
 					James Kim
 				</div>
 				<div id="time"></div>
-				<div id="message">
+				<div id="message" data-langNum="0">
 					Welcome to Royal Caribbean<br>
 					International.
 				</div>
@@ -48,9 +50,11 @@
 			<!-- menu container -->
 			<div class="menu">
 				<div class="youtube">
-					<img src="images/drawable-hdpi/entertainment_5.png">
+					<a href="https://www.youtube.com/channel/UCYfdidRxbB8Qhf0Nx7ioOYw">
+						<img src="images/drawable-hdpi/entertainment_5.png">
+					</a>
 					<div class="youtube_overlay">
-						<div class="youtube_text">YOUTUBE</div>
+						<div class="youtube_text" data-langNum="1">YOUTUBE</div>
 					</div>
 					</img>
 				</div>
@@ -59,7 +63,7 @@
 						<img src="images/drawable-hdpi/main_image_2.png">
 					</a>
 					<div class="events_overlay">
-						<div class="events_text">TODAY'S EVENTS</div>
+						<div class="events_text" data-langNum="2">TODAY'S EVENTS</div>
 					</div>
 				</div>
 				<div class="request">
@@ -67,7 +71,7 @@
 						<img src="images/drawable-hdpi/main_image_3.png">
 					</a>
 					<div class="request_overlay">
-						<div class="request_text">REQUEST</div>
+						<div class="request_text" data-langNum="3">REQUEST</div>
 					</div>
 				</div>
 				<div class="entertainment">
@@ -75,7 +79,7 @@
 						<img src="images/drawable-hdpi/main_image_4.png">
 					</a>
 					<div class="enter_overlay">
-						<div class="enter_text">ENTERTAINMENT</div>
+						<div class="enter_text" data-langNum="4">ENTERTAINMENT</div>
 					</div>
 				</div>
 				<div class="excursions">
@@ -83,7 +87,7 @@
 						<img src="images/drawable-hdpi/main_image_5.png">
 					</a>
 					<div class="excursions_overlay">
-						<div class="excursions_text">EXCURSIONS</div>
+						<div class="excursions_text" data-langNum="5">EXCURSIONS</div>
 					</div>	
 				</div>
 			</div>
