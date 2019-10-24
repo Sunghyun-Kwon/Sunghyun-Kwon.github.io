@@ -93,12 +93,15 @@ function addZeros(num, digit) { // 자릿수 맞춰주기
 }
 
 async function StartScan() {
+	console.log('Start');
 	var scan = await navigator.bluetooth.requestLEScan({
 	  filters: [{manufacturerData: {0x004C: {dataPrefix: new Uint8Array([
 	    0x02, 0x15 // iBeacon identifier.
 	  ])}}}],
 	  keepRepeatedDevices: true
-	})
+	});
+	
+	console.log(scan);
 	  navigator.bluetooth.addEventListener('advertisementreceived', event => {
 	    let appleData = event.manufacturerData.get(0x004C);
 	    if (appleData.byteLength != 23) {
