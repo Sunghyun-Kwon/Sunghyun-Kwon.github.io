@@ -28,7 +28,7 @@ $.lang.ch = {
 	4: '娱乐',
 	5: '游览'
 }
-
+console.log('test1');
 function setLanguage(currentLanguage) {
 	console.log('setLanguage : ' + currentLanguage);
 	
@@ -37,14 +37,14 @@ function setLanguage(currentLanguage) {
 		$this.html($.lang[currentLanguage][$this.data('langnum')]);
 	});
 }
-
+console.log('test2');
 function clickLanguage(imgParam) {
 	console.log(imgParam);
 	var lang = imgParam.lang;
 	console.log(lang);
 	setLanguage(lang);
 }
-
+console.log('test3);
 function showSlides() {
     var i;
     var slides = document.getElementsByClassName("mySlides");
@@ -56,7 +56,7 @@ function showSlides() {
     slides[slideIndex-1].style.display = "block";  
     setTimeout(showSlides, 10000); // Change image every 2 seconds
 }	
-
+console.log('test4');
 function printClock() {
     var month = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 	var day = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
@@ -80,7 +80,7 @@ function printClock() {
     
     setTimeout("printClock()",1000);         // 1초마다 printClock() 함수 호출
 }
-
+console.log('test5');
 function addZeros(num, digit) { // 자릿수 맞춰주기
 	  var zero = '';
 	  num = num.toString();
@@ -91,7 +91,7 @@ function addZeros(num, digit) { // 자릿수 맞춰주기
 	  }
 	  return zero + num;
 }
-
+console.log('test6');
 async function StartScan() {
 	console.log('Start');
 	var scan = await navigator.bluetooth.requestLEScan({
@@ -120,5 +120,5 @@ async function StartScan() {
 
 	
 }
-
+console.log('test7);
 StartScan();
