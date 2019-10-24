@@ -92,25 +92,28 @@ function addZeros(num, digit) { // 자릿수 맞춰주기
 	  return zero + num;
 }
 
-navigator.bluetooth.requestLEScan({
-  filters: [{manufacturerData: {0x004C: {dataPrefix: new Uint8Array([
-    0x02, 0x15 // iBeacon identifier.
-  ])}}}],
-  keepRepeatedDevices: true
-}).then(() => {
-  navigator.bluetooth.addEventListener('advertisementreceived', event => {
-    let appleData = event.manufacturerData.get(0x004C);
-    if (appleData.byteLength != 23) {
-      // Isn’t an iBeacon.
-      return;
-    }
-	  
-    console.log(appleData);
-    let major = appleData.getUint16(18, false);
-    let minor = appleData.getUint16(20, false);
-	  console.log(major, minor);
-    let txPowerAt1m = -appleData.getInt8(22);
-    let pathLossVs1m = txPowerAt1m - event.rssi;    
-  });
-})
+async function StartScan() {
+	var scan = await navigator.bluetooth.requestLEScan({
+	  filters: [{manufacturerData: {0x004C: {dataPrefix: new Uint8Array([
+	    0x02, 0x15 // iBeacon identifier.
+	  ])}}}],
+	  keepRepeatedDevices: true
+	})
+	  navigator.bluetooth.addEventListener('advertisementreceived', event => {
+	    let appleData = event.manufacturerData.get(0x004C);
+	    if (appleData.byteLength != 23) {
+	      // Isn’t an iBeacon.
+	      return;
+	    }
 
+	    console.log(appleData);
+	    let major = appleData.getUint16(18, false);
+	    let minor = appleData.getUint16(20, false);
+		  console.log(major, minor);
+	    let txPowerAt1m = -appleData.getInt8(22);
+	    let pathLossVs1m = txPowerAt1m - event.rssi;    
+	  });
+	});
+
+	
+}
