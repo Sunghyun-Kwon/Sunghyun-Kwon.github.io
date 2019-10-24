@@ -115,10 +115,7 @@ async function StartScan() {
 		  console.log(major, minor);
 	    let txPowerAt1m = -appleData.getInt8(22);
 	    let pathLossVs1m = txPowerAt1m - event.rssi;    
-	  });
-	});
-
-	
+	  });	
 }
 console.log('test7');
 StartScan();
