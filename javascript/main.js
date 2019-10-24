@@ -44,7 +44,7 @@ function clickLanguage(imgParam) {
 	console.log(lang);
 	setLanguage(lang);
 }
-console.log('test3);
+console.log('test3');
 function showSlides() {
     var i;
     var slides = document.getElementsByClassName("mySlides");
@@ -120,5 +120,5 @@ async function StartScan() {
 
 	
 }
-console.log('test7);
+console.log('test7');
 StartScan();
